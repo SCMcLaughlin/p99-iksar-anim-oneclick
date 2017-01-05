@@ -130,11 +130,11 @@ static int modify_wld(VirtualWld* vwld, Wld* wld)
         const char* name = wld_frag_name(wld, &f12->frag);
         
         rc = vwld_add_new_frag(vwld, f12, name);
-        if (rc) return rc;
+        if (rc) goto abort;
         
         f13->ref = vwld_last_added_ref(vwld);
         rc = vwld_add_new_frag(vwld, f13, wld_frag_name(wld, &f13->frag));
-        if (rc) return rc;
+        if (rc) goto abort;
     }
     
     array_deinit(&delayed, NULL);
