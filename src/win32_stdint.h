@@ -2,7 +2,7 @@
 #ifndef WIN32_STDINT_H
 #define WIN32_STDINT_H
 
-#ifdef EQP_WINDOWS
+#ifdef PLATFORM_WINDOWS
 
 typedef signed char int8_t;
 typedef unsigned char uint8_t;
@@ -13,6 +13,6 @@ typedef unsigned int uint32_t;
 typedef signed long long int64_t;
 typedef unsigned long long uint64_t;
 
-#endif/*EQP_WINDOWS*/
+#endif/*PLATFORM_WINDOWS*/
 
 #endif/*WIN32_STDINT_H*/
