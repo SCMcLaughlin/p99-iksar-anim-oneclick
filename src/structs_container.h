@@ -17,12 +17,6 @@ typedef struct Array {
     byte*       data;
 } Array;
 
-typedef struct String {
-    uint32_t    length;
-    uint32_t    capacity;
-    char*       data;
-} String;
-
 typedef struct HashTblEnt {
     union {
         Buffer* keyStr; /* The hash table makes private copies of all keys */
